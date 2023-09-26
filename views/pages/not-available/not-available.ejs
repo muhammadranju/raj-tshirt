@@ -1,0 +1,71 @@
+<%- include('../../partials/links/main-head-link.ejs') %>
+
+<body>
+  <!-- Modal Start-->
+  <% include('../../partials/popup/popup-model.ejs') %>
+  <!-- Quick view -->
+  <%- include('../../partials/quick-model/quick-model.ejs') %>
+  <header class="header-area header-style-2 header-height-2">
+
+    <% include('../../partials/header/top-head-bar/top-head-bar.ejs') %>
+    <!-- Top Head Bar -->
+    <%- include('../../partials/header/top-head-category/top-head-category.ejs') %>
+    <!-- Top Head Mega Menu -->
+    <%- include('../../partials/header/top-head-category/top-head-mega-menu.ejs') %>
+  </header>
+  <%- include('../../partials/header/mobile-head-menu/mobile-head-menu.ejs') %>
+
+  <!-- Main Start -->
+  <main class="main">
+    <!-- <div class="page-header breadcrumb-wrap">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="/" rel="nofollow">Home</a>
+          <span></span> <%=url %>
+        </div>
+      </div>
+    </div> -->
+    <div class="container">
+      <div class="row">
+        <main class="main page-404">
+          <div class="container">
+            <div class="row align-items-center height-100vh text-center">
+              <div class="col-lg-8 m-auto">
+                <p class="mb-"><img src="../../../assets/imgs/theme/404.png" alt="" class="hover-up"></p>
+                <h2 class="mb-30">Page Not Available</h2>
+                <p class="font-lg text-grey-700 mb-30">
+                  The link you clicked may be broken or the page may have been removed.<br> visit the <a href="/"> <span> Homepage</span></a> or <a href="page-contact.html"><span>Contact us</span></a> about the problem
+                </p>
+                <form class="contact-form-style text-center" id="contact-form" action="#" method="post">
+                  <div class="row">
+                    <div class="col-lg-6 m-auto">
+                      <div class="input-style mb-20 hover-up">
+                        <input name="name" placeholder="Search" type="text">
+                      </div>
+                    </div>
+                  </div>
+                  <a class="btn btn-default submit-auto-width font-xs hover-up" href="/">Back To Home Page</a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+
+  </main>
+  <!-- Main End -->
+
+  <!-- Footer  -->
+  <%- include('../../partials/footer/footer.ejs') %>
+  <!-- Preloader Start -->
+  <%- include('../../partials/bottom-top/preloader-start.ejs') %>
+  <!-- Vendor JS-->
+  <%- include('../../partials/links/vendor/vendor-link.ejs') %>
+  <!-- Template  JS -->
+  <%- include('../../partials/links/main-footer-link.ejs') %>
+
+</body>
+
+</html>

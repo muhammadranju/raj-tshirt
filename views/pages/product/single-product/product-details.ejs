@@ -1,0 +1,92 @@
+﻿<%- include('../../../partials/links/main-head-link.ejs') %>
+
+<body>
+  <!-- Quick view -->
+  <!-- Modal Start-->
+  <% include('../../../partials/popup/popup-model.ejs') %>
+  <!-- Quick view -->
+  <%- include('../../../partials/quick-model/quick-model.ejs') %>
+  <header class="header-area header-style-2 header-height-2">
+
+    <% include('../../../partials/header/top-head-bar/top-head-bar.ejs') %>
+    <!-- Top Head Bar -->
+    <%- include('../../../partials/header/top-head-category/top-head-category.ejs') %>
+    <!-- Top Head Mega Menu -->
+    <%- include('../../../partials/header/top-head-category/top-head-mega-menu.ejs') %>
+  </header>
+
+  <%- include('../../../partials/header/mobile-head-menu/mobile-head-menu.ejs') %>
+
+  <main class="main">
+    <div class="page-header breadcrumb-wrap">
+      <div class="container">
+        <div class="breadcrumb"> <a href="/category/<%=singleProduct.category_id._id %>?scm=<%=singleProduct.category_id.category.toLowerCase().split(' ').join('-')%>&scb=<%=singleProduct.subCategory_id.subcategory_name.toLowerCase().split(' ').join('-')%>&scs=<%=singleProduct.subCategorytwo_id.towsubcategory_name.toLowerCase().split(' ').join('-')%>"><%=singleProduct.category_id.category %> </a>
+          <span></span> <a href="/category/s/<%=singleProduct.subCategory_id._id %>?scm=<%=singleProduct.subCategory_id.subcategory_name.toLowerCase().split(' ').join('-')%>&scb=<%=singleProduct.category_id.category.toLowerCase().split(' ').join('-')%>&scs=<%=singleProduct.subCategorytwo_id.towsubcategory_name.toLowerCase().split(' ').join('-')%>"><%=singleProduct.subCategory_id.subcategory_name %> </a>
+          <span></span> <a href="/category/s1/<%=singleProduct.subCategorytwo_id._id%>?scm=<%=singleProduct.subCategorytwo_id.towsubcategory_name.toLowerCase().split(' ').join('-') %>&scb=<%=singleProduct.category_id.category.toLowerCase().split(' ').join('-')%>&scs=<%=singleProduct.subCategory_id.subcategory_name.toLowerCase().split(' ').join('-')%>"><%=singleProduct.subCategorytwo_id.towsubcategory_name%> </a>
+          <span></span> <%=singleProduct.title_name %>
+        </div>
+      </div>
+    </div>
+    <section class="mt-50 mb-50">
+      <div class="container">
+        <div class="row ">
+          <div class="col-lg-9">
+            <div class="product-detail accordion-detail">
+
+              <%- include('../../../partials/product/product-detail/single-product-detail.ejs') %>
+
+              <%- include('../../../partials/product/product-comment-review/comment-review.ejs') %>
+
+            </div>
+          </div>
+          <div class="col-lg-3 primary-sidebar sticky-sidebar">
+
+            <!-- Product sidebar Widget -->
+            <div class="sidebar-widget product-sidebar  mb-30 p-30 ">
+              <div class="widget-header position-relative mb-20 pb-10">
+                <h5 class="widget-title mb-10">From The Same Store</h5>
+                <!-- <div class="bt-1 border-color-1"></div> -->
+              </div>
+              <% for(let i=0;i<5;i++){ %>
+              <div class="single-post clearfix">
+                <a href="">
+                  <div class="image">
+                    <img src="../../../../assets/imgs/shop/thumbnail-3.jpg" alt="#">
+                  </div>
+                </a>
+                <div class="content pt-10">
+                  <h5><a href="shop-product-detail.html">Chen Cardigan</a></h5>
+                  <p class="price mb-0 mt-5">৳99</p>
+                  <div class="product-rate">
+                    <div class="product-rating" style="width:90%"></div>
+                  </div>
+                </div>
+              </div>
+              <% } %>
+              <div class="banner-img wow fadeIn mb-45 animated d-lg-block d-none">
+                <img src="../../../../assets/imgs/banner/banner-11.jpg" alt="">
+                <div class="banner-text">
+                  <span>Women Zone</span>
+                  <h4>Save 17% on <br>Office Dress</h4>
+                  <a href="shop-grid-right.html">Shop Now <i class="fi-rs-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
+
+
+  <!-- Footer  -->
+  <%- include('../../../partials/footer/footer.ejs') %>
+  <!-- Preloader Start -->
+  <%- include('../../../partials/bottom-top/preloader-start.ejs') %>
+  <!-- Vendor JS-->
+  <%- include('../../../partials/links/vendor/vendor-link.ejs') %>
+  <!-- Template  JS -->
+  <%- include('../../../partials/links/main-footer-link.ejs') %>
+
+</body>
+
+</html>

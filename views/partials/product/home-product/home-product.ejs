@@ -1,0 +1,50 @@
+   <section class="product-tabs pt-10 pb-30 wow fadeIn animated">
+     <div class="container">
+       <div class="row product-grid-2">
+         <% for(let p of product){ %>
+         <div class="col-lg-3 col-md-4">
+           <div class="product-cart-wrap mb-15">
+             <div class="product-img-action-wrap">
+               <div class="product-img product-img-zoom">
+                 <a href="/product/<%=p.short_title%>?spm=<%=p.product_sellerSKU %>&scm=<%=p.category%>&pvid=<%=p.subCategory_id %>">
+                   <img class="default-img" src="../../../../assets/imgs/shop/product-2-1.jpg" alt="">
+                   <!-- <img class="hover-img" src="../../../../assets/imgs/shop/product-2-2.jpg" alt=""> -->
+                 </a>
+               </div>
+               <div class="product-badges product-badges-position product-badges-mrg">
+                 <span class="hot">Hot</span>
+               </div>
+             </div>
+             <div class="product-content-wrap">
+               <div class="product-category">
+                 <a href="shop-grid-right.html"><%=p.brand_name %></a>
+               </div>
+               <h2 class="title_longs"><a href="/product/<%=p.short_title%>?spm=<%=p.product_sellerSKU %>&scm=<%=p.category%>&pvid=<%=p.subCategory_id %> "><%=p.title_name %> </a></h2>
+
+               <div class="product-price">
+                 <span>৳<%=p.product_price %> </span>
+                 <span class="old-price">৳<%=p.special_price %></span>
+               </div>
+               <div class="rating-result" title="10%">
+                 <span>
+                   <span>(10)</span>
+                 </span>
+               </div>
+               <!-- <div class="product-action-1 show">
+                 <a aria-label="Add To Cart" class="action-btn hover-up" href="shop-cart.html"><i class="fi-rs-shopping-bag-add"></i></a>
+               </div> -->
+             </div>
+           </div>
+         </div>
+         <% } %>
+       </div>
+     </div>
+     </div>
+   </section>
+
+   <script>
+     const divId = document.getElementById('divId')
+     divId.onmouseenter = function() {
+       console.log("first")
+     }
+   </script>

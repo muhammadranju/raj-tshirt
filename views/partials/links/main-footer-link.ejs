@@ -1,0 +1,19 @@
+<script>
+  const categoryLi = document.getElementById('categoryLi')
+  const selectId = document.getElementById('selectId')
+  window.onload = async function() {
+    const fetchCat = await fetch('/category')
+    const responseCat = await fetchCat.json()
+    responseCat.map((e) => {
+      // console.log(e.category)
+      categoryLi.innerHTML += `<a href="/category/${e._id}?scm=${e.category.toLowerCase().split(' ').join('-')}">${e.category}</a>`
+      selectId.innerHTML += `<option> ${e.category}</option>`
+
+    })
+
+  }
+</script>
+<!-- Template  JS -->
+<%- include('./vendor/vendor-link.ejs') %>
+<script src="../../../assets/js/main.js"></script>
+<script src="../../../assets/js/shop.js"></script>

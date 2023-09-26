@@ -1,0 +1,44 @@
+﻿<%- include('./partials/links/main-head-link.ejs') %>
+
+<body>
+  <!-- Modal Start-->
+  <% include('./partials/popup/popup-model.ejs') %>
+  <!-- Quick view -->
+  <%- include('./partials/quick-model/quick-model.ejs') %>
+  <header class="header-area header-style-2 header-height-2">
+
+    <% include('./partials/header/top-head-bar/top-head-bar.ejs') %>
+    <!-- Top Head Bar -->
+    <%- include('./partials/header/top-head-category/top-head-category.ejs') %>
+    <!-- Top Head Mega Menu -->
+    <%- include('./partials/header/top-head-category/top-head-mega-menu.ejs') %>
+  </header>
+
+
+  <!-- Main Start -->
+  <main class="main">
+    <!-- Home Slider -->
+    <%- include('./partials/home-slider-banner/home-slider.ejs') %>
+    <!-- Home Banner 1 -->
+    <%- include('./partials/home-slider-banner/home-banner-2.ejs') %>
+    <!-- Home Category -->
+    <%- include('./partials/home-category/home-category.ejs') %>
+    <!-- Home Banner 2 -->
+    <%- include('./partials/home-slider-banner/home-banners.ejs') %>
+    <!-- Home Product -->
+    <%- include('./partials/product/home-product/home-product.ejs') %>
+  </main>
+  <!-- Main End -->
+
+  <!-- Footer  -->
+  <%- include('./partials/footer/footer.ejs') %>
+  <!-- Preloader Start -->
+  <%- include('./partials/bottom-top/preloader-start.ejs') %>
+  <!-- Vendor JS-->
+  <%- include('./partials/links/vendor/vendor-link.ejs') %>
+  <!-- Template  JS -->
+  <%- include('./partials/links/main-footer-link.ejs') %>
+
+</body>
+
+</html>
